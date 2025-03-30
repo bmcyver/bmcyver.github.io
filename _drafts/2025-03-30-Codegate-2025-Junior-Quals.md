@@ -1,5 +1,5 @@
 ---
-title: CTF
+title: Codegate 2025 Junior Finals Writeup
 date: 2025-03-30 / +0900
 categories: [CTF Writeup]
 tags: [Web, Crypto, Rev, Misc]
@@ -8,8 +8,6 @@ pin: false
 comments: false
 math: false
 mermaid: false
-image:
-  lqip:
 ---
 
 ## web/Ping Teste
