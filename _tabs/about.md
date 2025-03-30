@@ -4,5 +4,12 @@ icon: fas fa-info-circle
 order: 4
 ---
 
-> Add Markdown syntax content to file `_tabs/about.md`{: .filepath } and it will show up on this page.
-{: .prompt-tip }
+Hello! I'm 김부민(Kim Boomin) aka bmcyver. I am currently studying web security ~~and binary exploitation~~.
+Also, I'm playing CTFs as [DeadSec](https://deadsec.team/) and 미스크올솔로교통비쟁취(Korean CTFs).
+
+I started this blog to share my knowledge and experience in web security and CTFs.
+I hope you find it helpful and informative.
+
+<!-- ## Awards -->
+ <!-- - 1<sup>st</sup> place as <team> in []()   -->
+ 
