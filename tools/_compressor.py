@@ -66,7 +66,5 @@ def process_images():
     for image_path in Path(IMAGE_DIR).rglob("*"):
         process_image(image_path)
 
-    print(f"{GREEN}✔ Markdown files updated successfully.{RESET}")
-
 if __name__ == "__main__":
     process_images()
