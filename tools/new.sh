@@ -37,7 +37,7 @@ categories: [CTF Writeup]
 tags: [Web]
 toc: true
 pin: false
-comments: false
+comments: true
 math: false
 mermaid: false
 ---
@@ -60,7 +60,7 @@ categories: []
 tags: []
 toc: true
 pin: false
-comments: false
+comments: true
 math: false
 mermaid: false
 ---
