@@ -1,7 +1,7 @@
 ---
 title: Codegate 2025 Junior Finals Writeup
 date: 2025-03-30 / +0900
-categories: [CTF Writeup]
+categories: [CTF Writeups]
 tags: [Web, Crypto, Rev, Misc]
 toc: true
 pin: false

@@ -33,7 +33,7 @@ if $CTF; then
 ---
 title: $TITLE
 date: $DATE / $TIMEZONE
-categories: [CTF Writeup]
+categories: [CTF Writeups]
 tags: [Web]
 toc: true
 pin: false
