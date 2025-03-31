@@ -5,7 +5,7 @@ categories: [CTF Writeups]
 tags: [Web, Ai]
 toc: true
 pin: false
-comments: false
+comments: true
 math: false
 mermaid: false
 ---

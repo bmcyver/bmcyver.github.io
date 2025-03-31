@@ -5,7 +5,7 @@ categories: [CTF Writeup]
 tags: [Web, Crypto, Rev, Misc]
 toc: true
 pin: false
-comments: false
+comments: true
 math: false
 mermaid: false
 ---
