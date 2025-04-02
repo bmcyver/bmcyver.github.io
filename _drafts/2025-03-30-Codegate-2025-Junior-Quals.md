@@ -10,17 +10,19 @@ math: false
 mermaid: false
 ---
 
-## web/Ping Teste
+## web/Ping Tester (250 points, 102 solves)
 
 `1.1.1.1 && cat flag` 을 입력하면 flag를 얻을 수 있다.
 
 `codegate2025{80fd12690c4d31a8cf3fe2865e3ceb99aca9e6047c6acb2cbb9157e26ec91f4b}`
 
-## web/Token Rush
+## web/Token Rush (275 points, 17 solves)
 
 먼저 코드를 보자.
 
-```ts title="index.ts" collapse={1-17, 27-30, 41-64, 76-108, 146-152} { 66-74, 135, 119, 34-36} "db.admin.uid !== data.uid"
+{: file="index.js"}
+
+```js
 const express = require("express");
 const cookieParser = require("cookie-parser");
 const crypto = require("node:crypto");
@@ -189,7 +191,9 @@ admin 계정은 `read_JWT`의 서명을 확인하지 않는 취약점을 통해 
 
 이를 이용해서 익스플로잇 코드를 작성하면 다음과 같다.
 
-```ts title="solver.ts"
+{: file="solver.ts"}
+
+```ts
 import { logger, randomStr } from "@utils";
 import { create } from "@web";
 import jwt from "jsonwebtoken";
@@ -229,9 +233,23 @@ fn2();
 
 `codegate2025{8b2c743e13f766b30c9c1e72e8a6595a651321da1c01eda7776fbd8e209ef9feace5a162237e696ea4b58a7bdf0b88dfb7f25c5ac76f4e12a4c4538d438fcdbf}`
 
-## crypto/Encrypted flag
+## web/Masquerade (Upsolving, 1000 points, 0 solve)
 
-```py title="prob.py"
+<!-- TODO add writeup -->
+
+## web/Cha's Point (Upsolving, 1000 points, 1 solve)
+
+<!-- TODO add writeup -->
+
+## web/backoffice (Upsolving, 1000 points, 0 solve)
+
+<!-- TODO add writeup -->
+
+## crypto/Encrypted flag (250 points, 92 solves)
+
+{: file="prob.py"}
+
+```py
 from Crypto.Util.number import bytes_to_long, getPrime
 from sympy import nextprime
 import gmpy2
@@ -259,7 +277,9 @@ print("Encrypted flag:", c)
 이는 `Fermat's factorization`을 이용해 쉽게 `p`와 `q`를 구할 수 있다는 것을 의미한다.
 `Fermat's factorization`을 이용해 `p`와 `q`를 구한 후, `d`를 구하고 `c`를 복호화하면 flag를 얻을 수 있다.
 
-```py title="solver.py"
+{: file="solver.py"}
+
+```py
 from Crypto.Util.number import long_to_bytes
 from gmpy2 import *
 
@@ -290,23 +310,25 @@ print(long_to_bytes(pow(c, d, n)).decode())
 
 `codegate2025{Cl0se_p_q_0f_RSA_Is_Vu1n3rabIe}`
 
-## misc/Hello Codegate
+## misc/Hello Codegate (250 points, 106 solves)
 
 디스코드 공지 채널에서 flag를 얻을 수 있다.
 
 `codegate2025{65782695e16255e3ef8517a1bfb059f0}`
 
-## misc/Captcha World
+## misc/Captcha World (250 points, 94 solves)
 
 자동화도 가능하겠지만, 60초에 10개만 풀면 되니 자동화를 하지 않고 풀 수 있다.
 
-![alt text](misc-captcha.png)
+![alt text](/assets/posts/2025-03-30-Codegate-2025-Junior-Quals/misc-captcha.webp)
 
 `codegate2025{759272206a29a2b8fb6d7f8731ad29c291defc51af1d0a84ea58e54fc6fa3b24b414f78d63e030fd906f0c22c401c0}`
 
-## misc/SafePythonExecutor
+## misc/SafePythonExecutor (306 points, 15 solves)
 
-```py title="executor.py"
+{: file="executor.py"}
+
+```py
 import ast
 from RestrictedPython import Eval
 from RestrictedPython import Guards
@@ -362,7 +384,9 @@ if __name__ == "__main__":
 
 <https://ur4ndom.dev/posts/2023-07-02-uiuctf-rattler-read/>에 나와 있는 익스플로잇 코드를 응용해 사용하면 된다.
 
-```py title="solver.py"
+{: file="solver.py"}
+
+```py
 from pwn import *
 
 connection = remote('3.35.196.167', po42424rt)
@@ -381,9 +405,11 @@ connection.close()
 
 `codegate2025{ce66359384d8fa276408f2a648b0cd08f63ed1e066c66083efb736509093156881e3c093ab1f958854bcd211614dbfe408c8728a8f22}`
 
-## rev/initial
+## rev/initial (250 points, 57 solves)
 
-```py title="solver.py"
+{: file="solver.py"}
+
+```py
 target = [
     54, -30, 46, -122, 109, 36, -51, -108, 26, 26, 70, -101, 73, -125, 97, 21,
     32, -78, 71, -22, 13, 66, -23, 61, -28, 116, 27, 22, -117, 84, 46, -86
